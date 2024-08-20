@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cards {
+  padding: 20px;
+  width: 800px;
+  display: flex;
+  gap: 1rem;
+  border: 1px solid rgb(9, 24, 34);
+  border-radius: 20px;
+}
+
+.cards > div {
+  height: 450px;
+  flex: 1;
+  transition: all 0.5s;
+  border-radius: 10px;
+  position: relative;
+}
+.cards > div::before {
+  transition: all 0.5s;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: #000;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  opacity: 0.7;
+}
+
+/* i added image using css */
+.card:nth-child(1) {
+  background: url("https://images.unsplash.com/photo-1723479319999-20ce0b63f0c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8");
+  background-size: cover;
+  background-position: center;
+}
+.card:nth-child(2) {
+  background: url("https://images.unsplash.com/photo-1723487445045-170989ff4100?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8");
+  background-size: cover;
+  background-position: center;
+}
+.card:nth-child(3) {
+  background: url("https://images.unsplash.com/photo-1723558001262-4a43b8b12c90?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8");
+  background-size: cover;
+  background-position: center;
+}
+.card:nth-child(4) {
+  background: url("https://images.unsplash.com/photo-1723477450561-791fd67efa56?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzOHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+}
+.card:nth-child(5) {
+  background: url("https://images.unsplash.com/photo-1681053203240-c36aee74cc03?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1OHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+}
+.card:nth-child(6) {
+  background: url("https://plus.unsplash.com/premium_photo-1723489337930-8bdd92bba034?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMDB8fHxlbnwwfHx8fHw%3D");
+  background-size: cover;
+  background-position: center;
+}
+
+/* when i hover the mouse on the card, card will be expand with flex 6 */
+.cards > div:hover {
+  flex: 6;
+}
+.cards > div:hover::before {
+  opacity: 0;
+}
+
+/* i hope understand this */
